@@ -15,7 +15,7 @@ $(document).ready(function () {
     $(window).scroll(function () {
         var scroll_top = $(window).scrollTop();
         // banner bg parallax
-        $('.jq-banner').css('background-position-y', -(scroll_top / 2) + 'px')
+        $('.jq-banner').css('background-position-y', +(scroll_top / 2) + 'px')
 
         // chef award show
         $('.jq-today-chef').each(function () {

@@ -208,7 +208,6 @@ h2, h3{
     background-image: url(../img/header_desktop@2x.png);
     background-size: 1049px 420px;
     background-position: top center;
-    background-attachment: fixed;
     background-repeat: no-repeat;
 	display: flex;
 	justify-content: center;
