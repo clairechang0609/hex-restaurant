@@ -317,13 +317,13 @@ h2, h3{
  font-family: "Font Awesome 5 Pro" !important;
  font-weight:900;
 }
-a.btn-grey, button.btn-orange{
+.btn-grey, .btn-orange{
 	border-radius: 3px;
 	margin-top: 30px;
     font-size: 14px;
     color: rgb(255,255,255);
 }
-a.btn-grey{
+.btn-grey{
 	background: rgba(0,0,0,0.35);
 }
 .btn-orange{
@@ -339,7 +339,7 @@ a.btn-grey{
 	display: flex;
     color: rgb(61,17,1);
 }
-.info div{
+.info .about, .info .contact{
     max-width: 300px;
     margin-top: 5px;
 	margin-right: 20px;
@@ -369,7 +369,7 @@ a.btn-grey{
     justify-content: flex-start;
 	align-items: flex-end;
 }
-.link .logo a{
+.link .logo{
 	display: block;
 	background: url(../img/logo_l@svg.svg) no-repeat;
 	width: 245px;
@@ -421,7 +421,7 @@ a.btn-grey{
     .footer{
         padding: 0 20px 20px;
     }
-    .info div{
+    .info .contact{
         margin-right: 10px;
     }
     .info h4{
@@ -848,7 +848,7 @@ a.btn-grey{
     color: rgb(61,17,1);
     border-bottom: 1px solid rgb(61,17,1);
 }
-.shop-menu .hightlight, .shop-menu li a:hover{
+.shop-menu .highlight, .shop-menu li a:hover{
     color: rgb(255,255,255);
     background: rgb(61,17,1);
     border-bottom: 1px solid rgb(239,233,231);
@@ -901,7 +901,7 @@ a.btn-grey{
 .search button{
     height: 32px;
     padding: 7px 10px;
-    margin-left: -2px;
+    margin-left: -1px;
     font-size: 14px;
     color: rgb(255,255,255);
     background: rgba(61,17,1,0.85);
@@ -932,11 +932,11 @@ a.btn-grey{
     position: relative;
     padding: 0 2px 5px 10px;
     font-size: 25px;
-    color: rgb(61,17,1);
+    color: rgba(61,17,1,0.85);
     text-decoration: none;
 }
 .checkout a:hover, .checkout a:active{
-    color: rgb(215,78,0)
+    color: rgb(61,17,1);
 }
 .checkout a::before{
     content: '1';
