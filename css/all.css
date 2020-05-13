@@ -66,6 +66,31 @@ h2, h3{
     font-family: 'Noto Sans TC';
     font-weight: 500;
 }
+/* fontawesome */
+.usefontawesome::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+ font-family: "Font Awesome 5 Brands" !important;
+ font-weight:900;
+}
+.usefontawesome:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+ font-family: "Font Awesome 5 Brands" !important;
+ font-weight:900;
+}
+.usefontawesome::-moz-placeholder { /* Mozilla Firefox 19+ */
+ font-family: "Font Awesome 5 Pro" !important;
+ font-weight:900;
+}
+.usefontawesome:-ms-input-placeholder { /* Internet Explorer 10-11 */
+ font-family: "Font Awesome 5 Pro" !important;
+ font-weight:900;
+}
+.usefontawesome::-ms-input-placeholder { /* Microsoft Edge */
+ font-family: "Font Awesome 5 Pro" !important;
+ font-weight:900;
+}
+.usefontawesome::placeholder { /* Most modern browsers */
+ font-family: "Font Awesome 5 Pro" !important;
+ font-weight:900;
+}
 
 /* main css */
 .wrap{
@@ -292,31 +317,6 @@ h2, h3{
 .form-main .pure-form-message a:hover{
     text-decoration: underline;
 }
-/* fontawesome */
-.usefontawesome::-webkit-input-placeholder { /* WebKit, Blink, Edge */
- font-family: "Font Awesome 5 Brands" !important;
- font-weight:900;
-}
-.usefontawesome:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
- font-family: "Font Awesome 5 Brands" !important;
- font-weight:900;
-}
-.usefontawesome::-moz-placeholder { /* Mozilla Firefox 19+ */
- font-family: "Font Awesome 5 Pro" !important;
- font-weight:900;
-}
-.usefontawesome:-ms-input-placeholder { /* Internet Explorer 10-11 */
- font-family: "Font Awesome 5 Pro" !important;
- font-weight:900;
-}
-.usefontawesome::-ms-input-placeholder { /* Microsoft Edge */
- font-family: "Font Awesome 5 Pro" !important;
- font-weight:900;
-}
-.usefontawesome::placeholder { /* Most modern browsers */
- font-family: "Font Awesome 5 Pro" !important;
- font-weight:900;
-}
 .btn-grey, .btn-orange{
 	border-radius: 3px;
 	margin-top: 30px;
@@ -442,27 +442,23 @@ h2, h3{
     padding: 50px 40px;
 }
 .intro h3{
-    position: relative;
-    text-align: center;
-    font-size: 22px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
     line-height: 32px;
     padding-bottom: 30px;
+    text-align: center;
 }
-.intro h3::before,
-.intro h3::after{
+.intro h3 span{
+    padding: 0 15px;
+    flex-shrink: 0;
+}
+.intro h3::before, .intro h3::after{
     content: '';
-    display: block;
-    position: absolute;
-    top: 28px;
     width: 150px;
     height: 1px;
     background: rgba(61,17,1,0.7);
-}
-.intro h3::before{
-    left: calc(50% - 270px);
-}
-.intro h3::after{
-    left: calc(50% + 120px);
 }
 .intro ul{
     display: flex;
@@ -476,7 +472,7 @@ h2, h3{
     align-items: center;
     text-align: center;
 }
-.intro-card > div{
+.intro-card div{
     position: relative;
     max-width: 200px;
     display: flex;
@@ -524,8 +520,7 @@ h2, h3{
     }
 }
 @media(max-width: 568px){
-    .intro h3::before,
-    .intro h3::after{
+    .intro h3::before, .intro h3::after{
         display: none;
     }
     .intro-card{
@@ -630,27 +625,23 @@ h2, h3{
     padding: 50px 20px;
 }
 .recommend h3{
-    position: relative;
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     font-size: 24px;
     line-height: 32px;
     padding-bottom: 30px;
+    text-align: center;
 }
-.recommend h3::before,
-.recommend h3::after{
+.recommend h3 span{
+    padding: 0 15px;
+    flex-shrink: 0;
+}
+.recommend h3::before, .recommend h3::after{
     content: '';
-    display: block;
-    position: absolute;
-    top: 15px;
     width: 150px;
     height: 1px;
     background: rgba(61,17,1,0.7);
-}
-.recommend h3::before{
-    left: calc(50% - 250px);
-}
-.recommend h3::after{
-    left: calc(50% + 100px);
 }
 .recommend ul{
     display: flex;
@@ -666,7 +657,7 @@ h2, h3{
     border-radius: 50%;
     margin-right: 15px;
 }
-.recommend-card > div{
+.recommend-card div{
     max-width: 220px;
     display: flex;
     flex-direction: column;
@@ -702,11 +693,11 @@ h2, h3{
     }
 }
 @media(max-width: 667px){
-    .recommend-card > div{
-        padding-top: 20px;
-    }
     .recommend-card{
         flex-direction: column;
+    }
+    .recommend-card div{
+        padding-top: 20px;
     }
     .recommend-card h4{
         padding-bottom: 15px;
@@ -720,8 +711,7 @@ h2, h3{
     .recommend h3{
         padding-bottom: 20px;
     }
-    .recommend h3::before,
-    .recommend h3::after{
+    .recommend h3::before, .recommend h3::after{
         display: none;
     }
     .recommend ul{
@@ -741,27 +731,23 @@ h2, h3{
     background: rgba(255,255,255,0.7);
 }
 .reserve-form h3{
-    position: relative;
-    font-size: 22px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
     line-height: 32px;
-    padding-bottom: 20px;
+    padding-bottom: 30px;
     text-align: center;
 }
-.reserve-form h3::before,
-.reserve-form h3::after{
+.reserve-form h3 span{
+    padding: 0 15px;
+    flex-shrink: 0;
+}
+.reserve-form h3::before, .reserve-form h3::after{
     content: '';
-    display: block;
-    position: absolute;
-    top: 28px;
     width: 150px;
     height: 1px;
     background: rgba(61,17,1,0.7);
-}
-.reserve-form h3::before{
-    left: calc(50% - 260px);
-}
-.reserve-form h3::after{
-    left: calc(50% + 110px);
 }
 .form-index{
     display: flex;
@@ -798,8 +784,7 @@ h2, h3{
     }
 }
 @media(max-width: 568px){
-    .reserve-form h3::before,
-    .reserve-form h3::after{
+    .reserve-form h3::before, .reserve-form h3::after{
         display: none;
     }
     .form-index .map, .form-index .form-main{
