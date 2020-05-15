@@ -141,7 +141,7 @@ h2, h3{
     border-radius: 0 0 25px 25px;
     line-height: 60px;
 }
-.menu li a:hover{
+.menu li a:hover, .menu li a:focus{
     background: rgb(245,108,35);
     line-height: 50px;
 }
@@ -202,7 +202,7 @@ h2, h3{
         border-radius: 20px;
         line-height: 1;
     }
-    .menu li a:hover, .menu li a:active{
+    .menu li a:hover, .menu li a:active, .menu li a:focus{
         line-height: 1;
     }
     .header.active .menu{
