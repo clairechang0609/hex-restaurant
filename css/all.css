@@ -229,7 +229,6 @@ h2, h3{
     }
 }
 .banner{
-	width: 100%;
     height: 420px;
     background-image: url(../img/header_desktop@2x.png);
     background-size: 1049px 420px;
@@ -302,7 +301,7 @@ h2, h3{
     background: rgb(245,108,35);
 }
 .form-main input::placeholder{
-  	color: rgba(61,17,1,0.5);
+    color: rgba(61,17,1,0.5);
 }
 .content .form-main input:focus{
 	border-color: rgb(245,108,35);
@@ -529,7 +528,6 @@ h2, h3{
     }
 }
 .today-chef{
-    width: 100%;
     background: rgb(61,17,1);
     color: rgb(255,255,255);
     display: flex;
